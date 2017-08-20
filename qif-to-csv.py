@@ -1,6 +1,6 @@
 import sys
 if len(sys.argv) == 3:
-    fileIO = open(sys.argv[1], 'r')
+    fileIO = open(sys.argv[1], 'rU')
     fileR = fileIO.read().split('\n')
     outStr = '{}\n'.format(fileR[0]) # keep !Type:<type> in the file
 

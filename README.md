@@ -46,8 +46,10 @@ copy data\<export_date>\esaver.csv data\<export_date>\esaver_labeled.csv
 copy data\<export_date>\choice.csv data\<export_date>\choice_labeled.csv
 ```
 
+Note: Unix copy is `cp`. Windows copy is `copy`.
+
 ##### 5. Process in Excel
-1. Open `esaver_labeled.qif` and `choice_labeled.qif` in Excel
+1. Open `esaver_labeled.csv` and `choice_labeled.csv` in Excel
 3. Remove row 1 which should read; `!Type:Bank`
 2. Add a column before `column A`
 3. Add the row number to the cells in column A. This will be used to sort the transactions back into the order they were exported in.
@@ -79,10 +81,10 @@ python csv-to-qif.py data/<export_date>/choice_labeled.csv data/<export_date>/ch
 3. Use the `choice_labeled.qif` and `esaver_labeled.qif` files
 4. Enter your account names;
 `
-Assets:Westpac eSaver
-`
-`
 Assets:Westpac Choice
+`
+`
+Assets:Westpac eSaver
 `
 
 5. Follow the prompts
